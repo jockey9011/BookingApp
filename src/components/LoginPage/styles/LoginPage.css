@@ -1,0 +1,49 @@
+.login__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: center;
+  margin: 25vh auto;
+  border: 3px solid white;
+  border-radius: 10px;
+  width: 20%;
+  min-width: 300px;
+  height: 340px;
+  background-color: #012b45;
+}
+
+.login__title {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #d1ddec;;
+  font-size: 35px;
+  font-weight: 700;
+}
+
+.login__label__email,
+.login__label__password {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  width: 250px;
+  color: #d1ddec;
+}
+
+.login__inputs {
+  height: 35px;
+}
+
+.login__button {
+  margin-top: 20px;
+  width: 250px;
+  height: 44px;
+  color: #012b45;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.login__button:hover {
+  background-color: #d1ddec;
+  color: #012b45;
+  transform: scale(1.1); 
+}

@@ -1,0 +1,379 @@
+/* MENÚ SUPERIOR*/
+
+.menu__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  width: 100%;
+  height: 7vh;
+  background-color: #012b45;
+  margin-bottom: 2vh;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.menu__title {
+  color: #ffffff;
+  font-size: 3rem;
+  margin-left: 3rem;
+}
+
+.menu__nav {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  gap: 2rem;
+  margin-right: 2rem;
+}
+
+
+/* ESTILOS PARA EL SEARCH Y BUTTON SUPERIORES DEL HOME*/
+
+.Home__Search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh; 
+}
+
+.Home__input__search {
+  padding: 10px; 
+  width: 30vw;
+  min-width: 300px;
+  border-radius: 10px;
+}
+
+.Home__button__search {
+  margin-left: 10px; 
+  padding: 10px; 
+  width: 10%;
+  min-width: 70px;
+  height: 44px;
+  background-color: #012b45;
+  color: #ffffff;
+  border: 3px solid white;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+/* En tu archivo CSS o componente de estilo en React */
+
+.Home__Container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Home__Container_Filters {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 100%;
+  max-width: 300px;
+  height: 650px;
+  padding: 20px;
+  margin-top: 20px;
+  margin-left: 30px;
+  margin-right: 10px;
+  border: 3px solid white;
+  border-radius: 10px;
+  background-color: #012b45;
+}
+
+.Home__title__filters {
+  color: #d1ddec;
+  text-align: center;
+  font-size: 35px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.Home__price__filters {
+  color: #d1ddec;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.Home__form__filters {
+  display: flex;
+  flex-direction: column;
+}
+
+.Home__from__filters,
+.Home__to__filters {
+  color: #d1ddec;
+}
+
+.Home__from__input__filters,
+.Home__to__input__filters {
+  border-color: #d1ddec;
+  margin-bottom: 10px;
+  height: 35px;
+}
+
+.Home__button__filters {
+  margin-top: 20px;
+  height: 44px;
+  background-color: #d1ddec;
+  color: #012b45;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.Home__button__filters:hover {
+  background-color: #ffffff;
+  color: #012b45;
+  transform: scale(1.1); 
+}
+
+/*--------------------------------------------------------------------------------*/
+
+.Home__Container__Hotelcards {
+  flex: 0 0 100%; 
+  padding: 20px;
+}
+
+/* Media query para pantallas más pequeñas (dispositivos móviles) */
+@media (min-width: 768px) {
+  .Home__Container_Filters {
+    flex: 0 0 25%;
+  }
+
+  .Home__Container__Hotelcards  {
+    flex: 1;
+  }
+}
+
+
+/* ESTILOS PARA LAS TARJETAS EN LIST HOTELS */
+
+.Hotel__card__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.hotel-container {
+  flex: 0 0 calc(25% - 2rem);
+  box-sizing: border-box;
+}
+
+.hotel-card-wrapper {
+  border-radius: 10px;
+  padding-top: 0px;
+  padding-bottom: 10px;
+  width: 100%;
+  height: 65vh;
+  min-height: 550px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  background-color: #012b45;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.4); 
+  border: 3px solid white;
+}
+
+.hotel-card-wrapper:hover {
+  box-shadow: 0px 30px 60px rgba(0, 0, 0, 0.6);
+}
+
+/* Media queries para dispositivos más pequeños */
+@media (max-width: 1600px) {
+  .hotel-container {
+   flex: 0 0 calc(33.33% - 2rem); 
+  }
+
+  .hotel-card-wrapper {
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 1200px) {
+  .hotel-container {
+    flex: 0 0 calc(50% - 2rem); 
+  }
+
+  .hotel-card-wrapper {
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 900px) {
+  .hotel-container {
+    flex: 0 0 100%;
+  }
+
+  .hotel-card-wrapper {
+    width: 60%;
+  }
+
+  .Home__Container_Filters {
+    justify-content: center;
+    max-width: 90%;
+    height: 650px;
+    margin-left: 23px;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .hotel-container {
+    flex: 0 0 100%; 
+  }
+
+  .hotel-card-wrapper {
+    width: 80%;
+    min-width: 80%;
+  }
+
+
+}
+
+
+/*ESTILOS DE LA CARD DEL HOTEL*/
+
+.HotelCard__Image {
+  width: 100%;
+  height: 30vh;
+  border-radius: 10px;
+  overflow: hidden; 
+  position: relative; 
+}
+
+.HotelCard__Image img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.HotelCard__Image:hover img {
+  transform: scale(1.1);
+}
+
+
+
+.HotelCard__Section {
+  color: #d1ddec;
+  text-align: center;
+}
+
+.HotelCard__title {
+  font-weight: 700;
+  margin-top: 5vh;
+  margin-left: 2vw;
+  margin-right: 2vw;
+  margin-bottom: 3vh;
+}
+
+.HotelCard__Raiting {
+  
+}
+
+.HotelCard__Country {
+ margin-top: 2vh;
+}
+
+.HotelCard__Price {
+ margin-top: 2vh;
+ margin-bottom: 1vh;
+}
+
+.HotelCard__Button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 44px;
+  margin: auto;
+  background-color: #d1ddec;
+  color: #012b45;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; 
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+.HotelCard__Button:hover {
+  background-color: white;
+  color: #012b45;
+  transform: scale(1.1); 
+}
+
+.content__filter__cities {
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.title__filter__cities {
+  margin-bottom: 20px;
+  color: #d1ddec;
+}
+
+.list__filter__cities {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #012b45;
+  height: 30px;
+  margin: 20px 30px;
+  cursor: pointer;
+  border: 2px solid white;
+  border-radius: 5px;
+  background-color: #d1ddec;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; 
+}
+
+.list__filter__cities:hover {
+  color: #012b45;
+  background-color: white;
+  transform: scale(1.1); 
+}
+
+/* ESTILO DEL CONTENEDOR DE LAS CARDS DENTRO DEL LA PAGINA DEL HOTEL*/
+
+.otherHotel__title {
+  text-align: center;
+  margin-bottom: 5vh;
+}
+
+.otherHotel__container__card {
+  margin-left: 31vw;
+  margin-right: -10vw;
+  margin-bottom: 5vh;
+}
+
+@media (max-width: 1200px) {
+  .otherHotel__container__card {
+    margin-left: 8vw;
+    margin-right: 6vw;
+    
+  }
+}
+
+@media (max-width: 900px) {
+  .otherHotel__container__card {
+    margin-left: 8vw;
+    margin-right: 8vw;
+    
+  }
+}
+
+@media (max-width: 600px) {
+  .otherHotel__container__card {
+    margin-left: 0.5vw;
+    margin-right: -1vw;
+    overflow-x: none;
+    
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,132 @@
+/* Estilos base para pantallas más grandes */
+
+.hotelInfo__title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.hotelInfo__img-map {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+.hotelInfo__img {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.hotelInfo__map {
+  width: 50%;
+  margin-bottom: 50px;
+}
+
+.hotelInfo__country,
+.hotelInfo__address,
+.hotelInfo__description {
+  margin-left: 10vw;
+  margin-right: 10vw;
+  text-align: justify;
+}
+
+/* Media query para pantallas más pequeñas, como dispositivos móviles */
+@media screen and (max-width: 768px) {
+  .hotelInfo__img-map {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+
+  .hotelInfo__img {
+    margin-bottom: 20px;
+  }
+
+  .hotelInfo__map {
+    width: 100%;
+  }
+
+  .hotelInfo__country,
+  .hotelInfo__address,
+  .hotelInfo__description {
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+}
+
+/*CLASES PARA LA SECCIÓN DE LA RESERVACIÓN */
+
+.reservation__title {
+  text-align: center;
+  margin: 5vh auto;
+}
+
+.form__reservation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border: 3px solid #012b45;
+  border-radius: 10px;
+  background-color: #012b45;
+  width: 50%;
+  height: 10vh;
+  margin: 5vh auto;
+}
+
+.span__chekInOut {
+  color: #d1ddec;
+  margin-right: 10px ;
+}
+
+.input__checkInOut {
+  width: 11.4vw;
+  height: 4vh;
+  border-color: white;
+  border-radius: 3px;
+}
+
+.button__booking {
+  width: 7vw;
+  height: 4vh;
+  background-color: #d1ddec;
+}
+
+@media (max-width: 600px) {
+  .form__reservation {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 35vh;
+    margin: 5vh auto;
+  }
+
+  .content__info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .span__chekInOut {
+    color: #d1ddec;
+    margin: 10px auto;
+  }
+
+  .input__checkInOut {
+    width: 70vw;
+    height: 4vh;
+    border-color: white;
+    border-radius: 3px;
+  }
+
+  .button__booking {
+    width: 70vw;
+    height: 4vh;
+    margin: 10px auto;
+    background-color: #d1ddec;
+    border-radius: 3px;
+  }
+
+
+}
