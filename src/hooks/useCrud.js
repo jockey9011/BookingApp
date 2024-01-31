@@ -1,5 +1,5 @@
 import { useState } from "react"
-import getConfigToken from "../services/getCOnfigToken"
+import getConfigToken from "../services/getConfigToken"
 import axios from "axios"
 
 
