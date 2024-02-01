@@ -6,6 +6,7 @@ import '../components/HotelInfoPage/styles/HotelInfoPage.css'
 import OtherHotels from '../components/HotelInfoPage/OtherHotels'
 import ReservationsHotel from "../components/HotelInfoPage/ReservationsHotel"
 import SliderImgs from "../components/HotelInfoPage/SliderImgs"
+import CommentsSection from "../components/HotelInfoPage/CommentsSection"
 
 const HotelInfoPage = () => {
 
@@ -56,6 +57,10 @@ const HotelInfoPage = () => {
         </div>
         <p className="hotelInfo__description">{hotel?.description}</p>
       </div>
+
+      <CommentsSection
+        hotelId={hotel?.id}
+      />
 
       <ReservationsHotel
        hotelId={hotel?.id}

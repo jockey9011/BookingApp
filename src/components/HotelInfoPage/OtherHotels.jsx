@@ -14,7 +14,6 @@ const OtherHotels = ({ cityId, hotelId }) => {
     }
   }, [cityId])
 
-  console.log(hotels);
 
   return (
     <>

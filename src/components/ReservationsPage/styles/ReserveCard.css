@@ -68,6 +68,7 @@
 
 .reserve__days {
   margin-left: 4vw;
+  color: #d1ddec;
 }
 
 .reserve__dollar {
@@ -75,6 +76,7 @@
   font-size: 12px;
   font-weight: 200;
   font-style: italic;
+  color: #d1ddec;
 }
 
 .reserve__button__delete {
@@ -92,6 +94,17 @@
   font-size: 20px;
   margin: 0 auto;
 
+}
+
+.reserve__reviews__click {
+  margin-top: 1vh;
+  color: rgb(228, 120, 120);
+  font-style: italic;
+}
+
+.reserve__reviews__click:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 /* Media query para ajustes en dispositivos más pequeños */

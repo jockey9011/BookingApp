@@ -1,16 +1,12 @@
-
+import React from 'react';
 import getDaysFromDates from "../../services/getDaysFromDates";
-import './styles/ReserveCard.css'
-import 'boxicons';
+import './styles/ReserveCard.css';
 
-const ReserveCard = ({ reserve, deleteReservation }) => {
-
-  console.log(reserve);
-
-  const reservationsDays = getDaysFromDates(reserve.checkIn, reserve.checkOut)
+const ReserveCard = ({ reserve, deleteReservation, setReserveSelected, onReviewClick }) => {
+  const reservationsDays = getDaysFromDates(reserve.checkIn, reserve.checkOut);
 
   const handleDelete = () => {
-    deleteReservation('/bookings', reserve.id)
+    deleteReservation('/bookings', reserve.id);
   }
 
   return (
@@ -20,6 +16,7 @@ const ReserveCard = ({ reserve, deleteReservation }) => {
         <div className="reserve__content__name__city">
           <h3 className="reserve__hotel__name">{reserve.hotel.name}</h3>
           <div className="reserve__hotel__city">{reserve.hotel.city.name}, {reserve.hotel.city.country}</div>
+          <div className='reserve__reviews__click' onClick={onReviewClick}>Rate and comment this visit...</div>
         </div>
       </header>
 
@@ -28,9 +25,8 @@ const ReserveCard = ({ reserve, deleteReservation }) => {
         <div><span>Subtotal Price:</span><span className="reserve__dollar"> USD$</span><span> {Number(reserve.hotel.price) * reservationsDays}</span></div>
       </section>
       <button className="reserve__button__delete" onClick={handleDelete}><i className="bx bx-trash"></i></button>
-
     </article>
-  )
+  );
 }
 
-export default ReserveCard
+export default ReserveCard;
